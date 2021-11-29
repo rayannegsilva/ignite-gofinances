@@ -3,6 +3,7 @@ import { Control, Controller } from 'react-hook-form';
 import { FormDataProps } from '../../../screens/Register';
 import {
   Container,
+  Error,
 } from './styles';
 
 import { Input } from '../Input';
@@ -11,11 +12,13 @@ import { TextInputProps } from 'react-native';
 interface Props extends TextInputProps {
   control: Control;
   name: string;
+  error: string;
 }
 
 export function InputForm({
   control,
   name,
+  error,
   ...rest
 }: Props) {
   return (
@@ -24,12 +27,13 @@ export function InputForm({
         control={control}
         render={({ field: { onChange, value } }) => (
           <Input
-            onChange={onChange}
+            onChangeText={onChange}
             value={value}
             {...rest} />
         )}
         name={name}
       />
+      {error && <Error>{error}</Error>}
     </Container>
 
   )
