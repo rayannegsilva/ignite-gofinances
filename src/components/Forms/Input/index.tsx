@@ -4,13 +4,15 @@ import {
   Container,
 } from './styles';
 
-type Props = TextInputProps;
+interface Props extends TextInputProps {
+  active?: boolean;
+}
 
-export function Input({ ...rest }: Props) {
+export function Input({  active = false,...rest}: Props) {
   return (
     <Container
       {...rest}
-
+      active={active}
     />
 
   )

@@ -57,7 +57,7 @@ export function Register() {
     name: 'Categoria',
   });
 
-  const { navigate }: NavigationProp<ParamListBase> = useNavigation();
+  //const { navigate }: NavigationProp<ParamListBase> = useNavigation();
 
   const {
     control,
@@ -75,7 +75,9 @@ export function Register() {
   }
 
   function handleOpenSelectCategoryModal() {
-    setCategoryModalOpen(true);
+    setTimeout(() => {
+      setCategoryModalOpen(true);
+    }, 900);
   }
 
   function handleCloseSelectCategoryModal() {
@@ -117,7 +119,7 @@ export function Register() {
         name: 'Categoria',
       });
 
-      navigate('Listagem');
+     // navigate('Listagem');
 
     } catch (error) {
       console.log(error);
@@ -179,7 +181,7 @@ export function Register() {
                 isActive={transactionType === 'negative'}
               />
             </TransactionTypes>
-            <CategorySelectButton
+            <CategorySelectButton testID='modal-button'
               title={category.name}
               onPress={handleOpenSelectCategoryModal}
             />
@@ -190,7 +192,7 @@ export function Register() {
           />
         </Form>
 
-        <Modal visible={categoryModalOpen}>
+        <Modal testID='modal-category' visible={categoryModalOpen}>
           <CategorySelect
             category={category}
             setCategory={setCategory}
