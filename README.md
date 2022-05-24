@@ -1,5 +1,5 @@
 # 😎 GoFinances
-[badge de licença]("https://img.shields.io/github/license/rayannegsilva/ignite-gofinances?style=flat-square")
+[badge de licença](https://img.shields.io/github/license/rayannegsilva/ignite-gofinances?style=flat-square)
 
 Projeto criado na Trilha de React Native do Rocketseat Ignite para auxiliar no controle de gastos.
 
