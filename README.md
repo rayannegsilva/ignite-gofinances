@@ -1,7 +1,7 @@
 # GoFinances
 
 <h1 align="center">
-  <img  width="100%"  title="GoFinances" src="src/assets/CapaGoFinances.png"/>
+  <img  width="100%"  title="GoFinances" src="src/assets/Capa.png"/>
 </h1>
 
 
